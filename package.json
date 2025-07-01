@@ -1,0 +1,24 @@
+{
+  "name": "web_project_around_express",
+  "version": "1.0.0",
+  "description": "Backend for Around The US project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "lint": "npx eslint ."
+  },
+  "author": "Seu Nome",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.0",
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "dotenv": "^17.0.1",
+    "express": "^4.21.2",
+    "mongoose": "^8.16.1"
+  }
+}
