@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const validator = require('validator');
+const { isURL } = require('validator');
 
 const userSchema = new mongoose.Schema({
   name: {
@@ -18,8 +18,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'O campo "avatar" é obrigatório'],
     validate: {
-      validator: (v) => /https?:\/\/(www\.)?[a-z0-9\-._~:/?#[\]@!$&'()*+,;=]+#?/i.test(v),
-      message: 'O campo "avatar" deve ser uma URL válida',
+      validator: (v) => isURL(v, {
+        protocols: ['http', 'https'],
+        require_protocol: true,
+      }),
+      message: 'O campo "avatar" deve ser uma URL válida com protocolo HTTP/HTTPS',
     },
   },
 });

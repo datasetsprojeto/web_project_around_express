@@ -1,24 +1,25 @@
 {
-  "name": "web_project_around_express",
+  "name": "around-express",
   "version": "1.0.0",
   "description": "Project 16: Around Express",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "lint": "npx eslint ."
+    "lint": "eslint ."
   },
   "author": "Seu Nome",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.56.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.28.0",
-    "nodemon": "^3.1.10"
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "nodemon": "^2.0.13"
   },
   "dependencies": {
-    "dotenv": "^17.0.1",
-    "express": "^4.21.2",
-    "mongoose": "^8.16.2"
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12",
+    "validator": "^13.7.0"
   }
 }
